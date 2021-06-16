@@ -1,0 +1,135 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+
+.posts-blog {
+  display: flex;
+  margin-bottom: 60px;
+  width: 780px;
+}
+.posts-blog:last-child {
+  margin-bottom: 0;
+}
+.photo-img {
+  width: 380px;
+}
+
+.posts-content {
+  display: block;
+  margin-left: 30px;
+}
+
+.tag-list {
+  display: flex;
+}
+
+.tag-item {
+  margin-right: 20px;
+  color: #b59f5b;
+  text-transform: uppercase;
+  font-family: "Open-Sans";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.tag-item:hover {
+  text-decoration: underline;
+}
+
+.tag-link {
+  color: #b59f5b;
+}
+
+.posts-title {
+  margin-top: 10px;
+  margin-bottom: 32px;
+  font-family: "Open-Sans";
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.posts-title a {
+  color: black;
+}
+
+.posts-title a:hover {
+  text-decoration: underline;
+}
+
+.posts-date {
+  margin-right: 15px;
+  font-family: "Open-Sans reg";
+  font-weight: normal;
+  font-size: 12px;
+  color: #888888;
+}
+
+.posts-author {
+  font-family: "Open-Sans";
+  font-weight: bold;
+  font-size: 12px;
+  color: #000;
+}
+
+.posts-text {
+  font-family: "Open-Sans reg";
+  font-weight: normal;
+  font-size: 15px;
+  color: #000;
+  line-height: 1.47;
+}
+
+.posts-info {
+  margin-top: 36px;
+  margin-bottom: 55px;
+}
+
+@media (max-width: 1200px) {
+  .posts-content {
+    margin-top: 17px;
+    margin-left: 0;
+  }
+  .photo-img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .posts-blog {
+    flex-direction: column;
+    width: 100%;
+    border-bottom: #eeeeee solid 3px;
+  }
+}
+
+@media (min-width: 671px) and (max-width: 1200px) {
+  .main {
+    flex-shrink: 1; /**Заполняет все доступное пространство*/
+    margin-right: 35px;
+  }
+
+  .posts-blog {
+    padding-bottom: 17px;
+  }
+  .posts-blog:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 670px) {
+  .main-container {
+    flex-direction: column;
+    margin-bottom: 55px;
+  }
+  .main {
+    margin-bottom: 45px;
+  }
+  .posts-blog {
+    padding-bottom: 24px;
+    margin-bottom: 35px;
+  }
+}

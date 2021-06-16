@@ -1,0 +1,198 @@
+.block__popup {
+  
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  display: none;
+}
+
+.block__popup::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 3;
+  opacity: 0.6;
+}
+
+.popup {
+  width: 390px;
+  padding: 54px 30px;
+  z-index: 4;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 240px;
+  flex: 0;
+  position: relative;
+}
+
+.popup__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup__title {
+  margin-bottom: 30px;
+}
+.popup__row {
+  margin-bottom: 35px;
+  font-family: "Open-Sans reg";
+  font-size: 13px;
+}
+
+.popup__row:last-child {
+  margin-bottom: 25px;
+}
+
+.popup__row__title {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.select {
+  width: 100%;
+  height: 48px;
+
+  padding-left: 10px;
+  padding-right: 25px;
+
+  margin: 0;
+
+  border: none;
+  background-color: #f4f7f6;
+  color: #333333;
+  opacity: 0.54;
+  -webkit-appearance: none;
+  background-image: url("../SVG/form-arrows.svg");
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  background-size: 3%;
+}
+
+.radio__block {
+  display: flex;
+}
+
+.popup__radio {
+  margin-right: 20px;
+}
+.popup__radio__elem {
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 0 0;
+}
+
+.popup__radio__elem + .radio__name {
+  cursor: pointer;
+}
+/*С этого места начинается модернизация кнопок. Первым делом, делаем нашу стандартную кнопку невидимой.*/
+.popup__radio__elem:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+/** Задаем позиционирование новой кнопке относительно нашего label*/
+.popup__radio__elem:not(checked) + .radio__name {
+  position: relative;
+  padding: 0 0 0 25px;
+  color: black;
+}
+/**Настройка вида для неактивной кнопки, когда в центре нет точки.*/
+.popup__radio__elem:not(checked) + .radio__name:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #b59f5b;
+  border-radius: 50%;
+  background: #fff;
+}
+/** Внешний вид той точки/кружка, что появляется в центре при нажатии на кнопку.*/
+.popup__radio__elem:not(checked) + .radio__name:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #b59f5b;
+  opacity: 0;
+  color: #b59f5b;
+}
+/**Прозрачность кружка/точки при активации*/
+.popup__radio__elem:checked + .radio__name:after {
+  opacity: 1;
+}
+
+/** Делает кружок оранжевым при нажатии на кнопку*/
+.popup__radio__elem:checked + .radio__name:before {
+  border: 1px solid #b59f5b;
+}
+
+.popup__textarea {
+  width: 330px;
+  height: 144px;
+  border: none;
+  resize: none;
+  background-color: #f4f7f6;
+  vertical-align: text-top;
+}
+
+::placeholder {
+  font-family: "Open-Sans reg";
+  font-size: 13px;
+  opacity: 0.54;
+}
+
+.popup__textarea:focus,
+.button:focus,
+.select:focus {
+  outline: 1px solid #b59f5b;
+}
+
+.popup__button {
+  width: 100%;
+  height: 48px;
+  border: none;
+  background-color: #b59f5b;
+  font-family: "Open-Sans";
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #323232;
+}
+
+.popup__close {
+  width: 18px;
+  height: 18px;
+  font-size: 20px;
+  position: absolute;
+  top: -27px;
+  right: 0;
+  text-indent: -9999px;
+  background-image: url(../SVG/form-x.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.popup__close:focus {
+  outline: none;
+}
