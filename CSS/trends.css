@@ -92,7 +92,7 @@
   color: #ffffff;
 }
 
-@media (min-width: 671px) and (max-width: 1200px) and (orientation:portrait) {
+@media (min-width: 641px) and (max-width: 1200px) and (orientation:portrait) {
   .trends__block {
     flex-wrap: wrap;
   }
