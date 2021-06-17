@@ -1,6 +1,4 @@
 .block__popup {
-  
-
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -28,7 +26,7 @@
   background-color: white;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 240px;
+  margin-top: 238px;
   flex: 0;
   position: relative;
 }
@@ -42,6 +40,7 @@
 .popup__title {
   margin-bottom: 30px;
 }
+
 .popup__row {
   margin-bottom: 35px;
   font-family: "Open-Sans reg";
@@ -84,28 +83,32 @@
 .popup__radio {
   margin-right: 20px;
 }
+
 .popup__radio__elem {
   width: 17px;
   height: 17px;
   margin: 0 3px 0 0;
 }
 
-.popup__radio__elem + .radio__name {
+.popup__radio__elem+.radio__name {
   cursor: pointer;
 }
+
 /*С этого места начинается модернизация кнопок. Первым делом, делаем нашу стандартную кнопку невидимой.*/
 .popup__radio__elem:not(checked) {
   position: absolute;
   opacity: 0;
 }
+
 /** Задаем позиционирование новой кнопке относительно нашего label*/
-.popup__radio__elem:not(checked) + .radio__name {
+.popup__radio__elem:not(checked)+.radio__name {
   position: relative;
   padding: 0 0 0 25px;
   color: black;
 }
+
 /**Настройка вида для неактивной кнопки, когда в центре нет точки.*/
-.popup__radio__elem:not(checked) + .radio__name:before {
+.popup__radio__elem:not(checked)+.radio__name:before {
   content: "";
   position: absolute;
   top: 0px;
@@ -116,8 +119,9 @@
   border-radius: 50%;
   background: #fff;
 }
+
 /** Внешний вид той точки/кружка, что появляется в центре при нажатии на кнопку.*/
-.popup__radio__elem:not(checked) + .radio__name:after {
+.popup__radio__elem:not(checked)+.radio__name:after {
   content: "";
   position: absolute;
   top: 4px;
@@ -129,18 +133,19 @@
   opacity: 0;
   color: #b59f5b;
 }
+
 /**Прозрачность кружка/точки при активации*/
-.popup__radio__elem:checked + .radio__name:after {
+.popup__radio__elem:checked+.radio__name:after {
   opacity: 1;
 }
 
 /** Делает кружок оранжевым при нажатии на кнопку*/
-.popup__radio__elem:checked + .radio__name:before {
+.popup__radio__elem:checked+.radio__name:before {
   border: 1px solid #b59f5b;
 }
 
 .popup__textarea {
-  width: 330px;
+  width: 100%;
   height: 144px;
   border: none;
   resize: none;
@@ -195,4 +200,26 @@
 
 .popup__close:focus {
   outline: none;
+}
+
+
+
+@media (max-width: 670px) {
+  .popup {
+    padding: 30px 25px;
+    width: 330px;
+    margin-top: 55px;
+  }
+
+  .popup__title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width:1200px) {
+  .popup__close {
+    width: 27px;
+    height: 27px;
+    top: -36px;
+  }
 }

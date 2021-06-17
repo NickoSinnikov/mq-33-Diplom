@@ -123,6 +123,8 @@
   top: 50%;
 }
 
+
+
 @media (min-width: 1201px) {
   .menu__button {
     display: none;
@@ -136,22 +138,29 @@
 }
 /** */
 
+
+
 @media (min-width: 641px) and (max-width: 1200px) {
   .header {
     background-image: url(../IMG/banner-bg-tablet.jpg);
+    margin-bottom: 50px;
+  }
+
+  .logo-img {
+    width: 160px;
   }
   .header-title {
-    padding: 0;
+    padding:  103px 10vw 125px 10vw;
   }
 
   .title {
-    font-size: 26px;
+    font-size: 40px;
+    line-height: 1.37;
   }
 }
 
 @media (max-width: 641px) {
   .header {
-    height: 34.4%;
     background-image: url(../IMG/banner-mobile.jpg);
     justify-content: start;
     margin-bottom: 45px;
@@ -162,7 +171,9 @@
     padding-top: 30px;
     margin-bottom: 40px;
   }
-
+  .logo{
+    text-align: center;
+  }
   .logo-img {
     width: 100%;
   }

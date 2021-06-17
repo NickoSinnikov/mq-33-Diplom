@@ -53,8 +53,13 @@ li {
     max-width: 1200px;
     padding: 0 35px 0 35px;
   }
+
   .wrapper {
     width: 100%;
+  }
+
+  .section {
+    margin-bottom: 50px;
   }
 }
 
