@@ -112,7 +112,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 640px) and (orientation:portrait) {
   .trends__block {
     flex-wrap: wrap;
   }
