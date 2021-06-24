@@ -39,12 +39,14 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    z-index: 4;
 
 }
 
 
 .product__body {
     margin-bottom: 22px;
+
 }
 
 .product__title {
@@ -63,11 +65,14 @@
     line-height: 1.28;
 }
 
-.product__desc p a {
+.product__desc-link {
     font-family: "Open-Sans reg";
     font-size: 15px;
     line-height: 1.28;
-    color: #b59f5b;
+    color: #baa667;
+}
+.product__desc-link:hover{
+    text-decoration: underline;
 }
 
 .product__footer {
